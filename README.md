@@ -1,27 +1,44 @@
 <div align="center">
-  <h1>Retro Lite CM5: RK3588s Gaming Handheld</h1>
+  <h1>Retro Lite/RetrOLED CM5: RK3588s Gaming Handheld</h1>
 </div>
 
 <div align="center">
-  <img src="https://i.imgur.com/v9KPeW5.png" alt="Image of Retro Lite CM5">
+  <img src="https://i.imgur.com/ZPLBWC7.jpeg" alt="Image of Retro Lite CM5" width="50%">
 </div>
+<p align="center">This is the RetroLED CM5, a handheld console designed by GinKage, notime2d8 and StonedEdge.</p>
 
 <div align="center">
-  <img src="https://i.imgur.com/daHOwZD.png" alt="Image of Retro Lite CM5">
+  <img src="https://i.imgur.com/okeUgK3.jpeg" alt="Image of Retro Lite CM5" width="50%">
 </div>
+<p align="center">Running Hollow Knight via Box64 and Steam on upstream Armbian kernel.</p>
 
-The Retro Lite CM5 is an upgrade to the Retro Lite CM4 handheld. The project goal is to create a more powerful handheld that can handle 3DS, PS2 and GC emulation (none of which the Pi can do). I also would like to be able to play some games via Box64/86. It has a relatively large battery so run time should be excellent, considering it is ARM based. 
+<div align="center">
+  <img src="https://i.imgur.com/yMEzdtc.jpeg" alt="Image of Retro Lite CM5" width="50%">
+</div>
+<p align="center">Official Android support, thanks to the work of notime2d8.</p>
+
+<div align="center">
+  <img src="https://i.imgur.com/kFhauRE.jpeg" alt="Image of Retro Lite CM5" width="50%">
+</div>
+<p align="center">Latest ROCKNIX images available with Vulkan driver support.</p>
+
+<div align="center">
+  <img src="https://i.imgur.com/212uPR0.jpeg" alt="Image of Retro Lite CM5" width="50%">
+</div>
+<p align="center">Open source hardware files available for download.</p>
+
+The Retro Lite/RetrOLED CM5 is an upgrade to the Retro Lite CM4 handheld. The project goal is to create a more powerful handheld that can handle 3DS, PS2 and GC emulation (none of which the Pi can do). I also would like to be able to play some games via Box64/86. It has a relatively large battery so run time should be excellent, considering it is ARM based. **Now with an optional OLED upgrade!**
 
 Powered by the RK3588s compute module from Radxa, which is an SBC SOM module with an ARMv8 64-bit processor. Features 8 cores/threads - 4 x ARM Cortex-A55/A76 cores with A55 cores clocked at 1.8GHz, and A76 cores clocked at 2.4GHz. It also has a built-in Mali G610 GPU. 
 
-The Retro Lite CM5 offers a more modern gaming experience with DisplayPort via USB Type-C, USB 3.0 & HDMI 2.1. Built-in PCIe WiFI 6.0 & BT 5.2, as well as a new 720p IPS display @ 5.5" with touchscreen support & dual tact trigger buttons for GameCube support, make this a much more viable low-powered ARM SBC gaming PC than the Raspberry Pi 4. 
+The Retro Lite/RetrOLED CM5 offers a more modern gaming experience with DisplayPort via USB Type-C, USB 3.0 & HDMI 2.1. Built-in PCIe WiFI 6.0 & BT 5.2, as well as a new 720p IPS display @ 5.5" with touchscreen support & dual tact trigger buttons for GameCube support, make this a much more viable low-powered ARM SBC gaming PC than the Raspberry Pi 4. 
 
-The operating system will be based on Armbian, with a custom device tree for hardware interfacing & RetroPie pre-installed. However, the user can use it however they would like, either in a Linux desktop environment or with other Linux based frontends, such as ES-DE. This handheld should be able to play the entire PS2 library at least 1x native resolution for all games, as well as GameCube at 1x on Linux with OpenGLES drivers. Android is currently more performant due to Vulkan drivers, however Linux Vulkan blobs should come soon (or someday, who knows). We also now have succesfully compiled ROCKNIX as well, so that will be an option to use as well. 
+The operating system will be based on Armbian, with a custom device tree for hardware interfacing & RetroPie pre-installed. However, the user can use it however they would like, either in a Linux desktop environment or with other Linux based frontends, such as ES-DE. This handheld should be able to play the entire PS2 library at least 1x native resolution for all games, as well as GameCube at 1x on Linux with OpenGLES drivers. Android is currently more performant due to Vulkan drivers, however Linux Vulkan blobs should come soon (or someday, who knows). We also now have succesfully compiled ROCKNIX as well. Eventually I will compile all of the final images to GitHub. 
 
 For regular updates/following progress on the build, please check out the forum post here:
 https://bitbuilt.net/forums/index.php?threads/retro-lite-cm5.5815/
 
-# Retro Lite CM5: Radxa RK3588s Handheld 
+# Retro Lite/RetrOLED CM5: Radxa RK3588s Handheld 
 
 ## Features
 
@@ -35,7 +52,8 @@ Arm Mali-G610 MP4 “Odin” GPU Video decoder – 8Kp60 H.265, VP9, AVS2, 8Kp30
 - 6 layer carrier board with 3 B2B mezzanine connectors to interface with any Radxa CM5 module 
 - 5v boost rated at 3.5A continuous current
 - RP2040 gamepad - complete with SDL mappings and evdev gyro support/mouse control via MPU6050
-- 1280 x 720 (5.5" DSI IPS LCD): DSI video output on internal display
+- 1280 x 720p (5.5" DSI IPS LCD): DSI video output on internal display
+**- New: Optional 1920 x 1080p (5.44" AMOLED): DSI video output on internal display** 
 - Up to 4k HDMI video output via HDMI output
 - Up to 4k DisplayPort Alternate Mode via Type-C
 - USB 2.0/3.1 capable USB-C data transfer
@@ -56,7 +74,7 @@ Software specifications:
 - Android 13 support (beta)
 - Full upstream Rocknix support
 - Wayland windowing system (xorg capable)
-- Hardware graphics support via Panfrost/OpenGLES (no Vulkan support… for now)
+- Hardware graphics support via Panfrost/OpenGLES/I want a broken vulkan driver "support"
 - Safe software/hardware shutdown (either from software or via button)
 - Low power sleep mode - in my tests, 24 hours in standby mode draws around 6% of total battery life
 - Range adjustable joysticks in software by pressing plus hotkey plus R3 --> A --> rotate sticks --> A combination
@@ -120,25 +138,50 @@ The board has been verified and fully functional with Radxa V2.2 CM5 modules! I 
 - [x] Implement an on-screen indicator for volume, brightness control via GPIOs
 - [x] Rocknix upstream support
 - [x] Android 13 support 
-- [ ] Adjust BQ24292i registers to charge to 4.35v max instead of 4.2v due to using LiHv cell
+- [ ] Adjust BQ24292i registers to charge to 4.35v max instead of 4.2v due to using LiHv cell (might not do, given cells may go kaboom)
 - [x] Other optimizations/improvements/bug fixes
 - [x] Create prototype showcase video for YouTube
 - [x] Final GitHub open source release & announcement!
+- [x] Integrate OLED RM67199 patches
+- [x] Integrate goodix gtx8 patches (GT9886)
+-------------------------------------------------------------------------------------------------------
 
+### Firmware 
+At the moment, there are a couple of options for firmware which I will separate out into two devices, the Retro Lite CM5 and the RetrOLED CM5. 
+We are continuing to work on these - few developers will be getting units soon which should accelerate the process of development as well.  
+
+**Retro Lite CM5**
+- [x] ROCKNIX
+- [x] Armbian Gnome Desktop (OpenGL/OpenGLES)
+- [x] Armbian Gnome Desktop (OpenGLES/Vulkan)
+- [x] Android 13 (Beta)
+- [ ] Android 14 
+
+**RetrOLED CM5**
+- [x] ROCKNIX
+- [x] Armbian Gnome Desktop (OpenGL/OpenGLES)
+- [ ] Armbian Gnome Desktop (OpenGLES/Vulkan)
+- [ ] Android 13 (Beta)
+- [ ] Android 14
 -------------------------------------------------------------------------------------------------------
 
 ### Frequently Asked Questions (FAQ) 
-Q: How can I get my hand on a Retro Lite CM5? Do you sell them or will you sell them?
+Q: How can I get my hand on a Retro Lite/RetrOLED CM5? Do you sell them or will you sell them?
 
-A: Radxa have advised that **this device will not be mass produced**. There is no method to get your hands on one of these at this time. 
+A: Radxa have advised that **this device will not be mass produced**. There is no method to get your hands on one of these at this time. This project is mainly for fun, cost is not a huge consideration here. 
+
+Q: How much does it cost in parts to build one of these?
+
+A: Expect to spend at minimum around $350-400 for a single one-off build. 
 
 Q: Why dont you use an OLED screen? 
 
-A: We are working on this! We have a 5.5" OLED panel that will be integrated into a new front shell. Be sure to make sure you print the right one and use the right image. I expect to have this ready in the next couple of months. 
+A: **Funny you ask. We now have OLED support!** The OLED screen is functioning with touch integration. We are using this OLED screen here: https://www.alibaba.com/product-detail/oled-display-module-5-44inch-oled_60726980273.html
+Make sure you confirm the model number is ET055FH06-GT. You will also need to order the flex PCB with JLCPCB (costs around $10). 2 layer is fine, make sure to send them the production files as a reference. I have verified that it works with the current carrier board. 
 
 Q: Why do this when you can get an equivalent handheld from Aliexpress for $150? This is stupid and DOA! Makes no sense! Non-sensical! I'm going to buy myself a better handheld. 
 
-A: Because it's fun to build something awesome. The End. Thanks for visiting & farewell, this project isn't for you. 
+A: Because it's fun to build something awesome. It's not about the end result, its the process for me. Thanks for visiting & farewell, this project probably isn't for you. 
 
 Q: Is Vulkan working yet on Linux?
 
@@ -146,7 +189,7 @@ A: We have a temporarily solution for Vulkan on Linux, but the driver is not con
 
 Q: Can you please make me one for exposure on YouTube? I promise to give incredible reviews!
 
-A: Nope. I simply don't have time. 
+A: Nope. I simply don't have time. Sorry. 
 
 ### License
 
